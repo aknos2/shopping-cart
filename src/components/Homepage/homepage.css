@@ -1,0 +1,23 @@
+.homepage-container {
+    background: black;
+    min-height: 65vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 100%;
+}
+
+.main-container {
+    background-image: url(./src/assets/sofas/homepage-sofa-high.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-height: 30rem;
+    max-width: 50rem;
+    margin-left: 30px;
+    position: relative;
+}   
+
+.main-container a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

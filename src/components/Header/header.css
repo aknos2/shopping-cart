@@ -1,0 +1,12 @@
+header {
+    background-color: rgb(41, 28, 14);
+    min-height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav h1 {
+    color: white;
+    font-size: 3rem;
+}

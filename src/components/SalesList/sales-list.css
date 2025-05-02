@@ -1,0 +1,15 @@
+.sales-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    text-align: center;
+    place-items: center;
+    background-color: beige;
+    min-height: 25vh;
+}
+
+.sales-card{
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+}
