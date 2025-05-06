@@ -1,0 +1,55 @@
+.headerImage {
+    background-image: url(../../../assets/sofas/main-sofa1-high.webp);
+    background-size: cover;
+    background-position: 50% 70%;
+    
+    width: 75vw;
+    height: 16vw;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 3.2rem;
+    padding-bottom: 10px;
+    padding-top: 5vh;
+}
+
+.itemsContainer {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+    min-width: 1080px;
+    max-width: 80vw;
+}
+
+.itemsContainerContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding-top: 5px;
+}
+
+.cardDescription {
+    margin-left: 5px;
+}
+
+.cardDescription h3 {
+    font-size: 1.5rem;
+}
+
+.cardPrice {
+    margin-left: auto;
+    font-weight: 580;
+    font-size: 1.2rem;
+    margin-right: 30px;
+}
+
+.card:hover {
+    cursor: pointer;
+    filter: brightness(110%);
+}

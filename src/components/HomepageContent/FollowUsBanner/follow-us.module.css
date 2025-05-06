@@ -1,0 +1,23 @@
+.container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(100px);
+    background-color: rgb(165, 122, 78);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    border-radius: 10px 0 0 10px;
+    border-right: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.logos {
+    display: flex;
+    gap: 20px;
+}

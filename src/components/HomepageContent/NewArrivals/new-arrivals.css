@@ -1,0 +1,151 @@
+.new-arrivals-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: beige;
+    overflow-x: hidden;
+    z-index: 0;
+    width: 100%;
+}
+
+.new-arrivals-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 20rem;
+}
+
+.new-arrivals-container h2 {
+    font-size: 3rem;
+    padding-top: 250px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.new-arrivals-popup {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 12rem;
+    height: 12rem;
+    transform: translateY(-50px);
+    border-radius: 0 100px 100px 0;
+    background-image: url(./src/assets/sofas/new-sofa-promotion-high.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    z-index: 99;
+}
+
+.new-arrivals-popup p {
+    color: aliceblue;
+    background-color: rgb(159, 46, 46);
+    width: 80%;
+    border-radius: 0 30px 30px 0;
+    border: 2px solid black;
+    border-left: none;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Container for the carousel and buttons */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 70vw;
+}
+
+.scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.new-card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 80px;
+    width: max-content;
+    height: 70vh;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    border-left: none;
+    border-right: none;
+}
+
+.new-card {
+    width: 70vw;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(120%);
+    position: relative;
+}
+
+.new-card h3, .new-card p {
+    padding: 20px;
+    color: whitesmoke;
+    position: absolute;
+    bottom: 0;
+}
+
+.new-card h3 {
+    font-size: 2.5rem;
+}
+
+.new-card p:first-of-type {
+    transform: translateY(-60px);
+    font-size: 1.5rem;
+}
+
+.new-card p:nth-of-type(2) {
+    right: 10px;
+    font-size: 2rem;
+}
+
+/* Navigation buttons */
+.left-btn-scroll,
+.right-btn-scroll {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-btn-scroll {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.right-btn-scroll {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.left-btn-scroll:hover,
+.right-btn-scroll:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
