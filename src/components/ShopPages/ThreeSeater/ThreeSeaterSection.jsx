@@ -5,7 +5,6 @@ import { threeSeaterSofas } from "./threeSeaterSofas";
 const ThreeSeaterSection = () => {
     return (
         <>
-        <Header />
         <div className={styles.container}>
             <h1>3-Seater-Sofas</h1>
             <div className={styles.headerImage}></div>

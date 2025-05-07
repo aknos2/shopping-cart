@@ -2,6 +2,7 @@ import Button from '../../others/Button';
 import SideMenu from '../Side-Menu/SideMenu';
 import './header.css';
 import { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isSideMenu, setSideMenu] = useState(false);
@@ -35,7 +36,7 @@ const Header = () => {
                         </div>
                     )}
                 </div>
-                <h1>LOGO</h1>
+                <Link className="logo-link" to="/">LOGO</Link>
                 <div className='nav-links right'>
                     <a href="##">CART</a>
                     <a href="##">Login</a>

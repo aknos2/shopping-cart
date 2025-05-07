@@ -9,8 +9,8 @@ const SofaMenu = () => {
                 <Link to="twoseatersofas">2-seater</Link>
                 <Link to="threeseatersofas">3-seater</Link>
                 <Link to="fourseatersofas">4-seater</Link>
-                <a href="##">Modular sofas</a>
-                <a href="##">Sleeper sofas</a>
+                <a href="##" style={{ pointerEvents: 'none', color: 'gray' }}>Modular sofas</a>
+                <a href="##" style={{ pointerEvents: 'none', color: 'gray' }}>Sleeper sofas</a>
             </div>
         </div>
     )
@@ -20,9 +20,9 @@ const CouchMenu = () => {
     return (
         <div className='couch-side-menu'>
             <div className='sofa-side-menu-content-a'>
-                <a href="##">couch1</a>
-                <a href="##">couch2</a>
-                <a href="##">couch3</a>
+                <a href="##">Tuxedo</a>
+                <a href="##">Lawson</a>
+                <a href="##">Camelback</a>
             </div>
         </div>
     )

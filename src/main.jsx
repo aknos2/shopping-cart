@@ -7,24 +7,36 @@ import TwoSeaterSection from './components/ShopPages/TwoSeater/TwoSeaterSection.
 import ErrorPage from './components/others/Error.jsx'
 import ThreeSeaterSection from './components/ShopPages/ThreeSeater/ThreeSeaterSection.jsx'
 import FourSeaterSection from './components/ShopPages/FourSeater/FourSeaterSection.jsx'
+import RootLayout from './layouts/rootLayout.jsx'
+import ProductPage from './components/ProductPage/ProductPage.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <RootLayout />,
     errorElement: <ErrorPage />,
-  },
-  {
-    path: "twoseatersofas",
-    element: <TwoSeaterSection />,
-  },
-  {
-    path: "threeseatersofas",
-    element: <ThreeSeaterSection />,
-  },
-  {
-    path: "fourseatersofas",
-    element: <FourSeaterSection />,
+    children: [
+      {
+        index: true,
+        element: <App />
+      },
+      {
+        path: "twoseatersofas",
+        element: <TwoSeaterSection />,
+      },
+      {
+        path: "twoseatersofas/:productId",
+        element: <ProductPage />,
+      },
+      {
+        path: "threeseatersofas",
+        element: <ThreeSeaterSection />,
+      },
+      {
+        path: "fourseatersofas",
+        element: <FourSeaterSection />,
+      },
+    ]
   },
 ]);
 
