@@ -35,8 +35,16 @@ const router = createBrowserRouter([
         element: <ThreeSeaterSection />,
       },
       {
+        path: "threeseatersofas/:productId",
+        element: <ProductPage />,
+      },
+      {
         path: "fourseatersofas",
         element: <FourSeaterSection />,
+      },
+      {
+        path: "fourseatersofas/:productId",
+        element: <ProductPage />,
       },
       {
         path: "cart",

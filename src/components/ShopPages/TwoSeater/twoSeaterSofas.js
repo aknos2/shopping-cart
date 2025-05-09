@@ -22,20 +22,38 @@ export const twoSeaterSofas = [
         price: 550,
         title: "Highland",
         description: "Stylish sofa",
-        productId: "a02"
+        productId: "a02",
+        size: "length: 152.4 cm, depth: 78.7 cm, height 81.3 cm",
+        subImages: {
+            a: twoSeaterSofa1a,
+            b: twoSeaterSofa1b,
+            c: twoSeaterSofa1c
+        }
     },
     {
         image: twoSeaterSofa1,
         price: 450,
         title: "Lilas",
         description: "Modern casual sofa",
-        productId: "a03"
+        productId: "a03",
+        size: "length: 152.4 cm, depth: 78.7 cm, height 81.3 cm",
+        subImages: {
+            a: twoSeaterSofa1a,
+            b: twoSeaterSofa1b,
+            c: twoSeaterSofa1c
+        }
     },
     {
         image: twoSeaterSofa1,
         price: 580,
         title: "Lowso",
         description: "Futurist style sofa",
-        productId: "a03"
+        productId: "a03",
+        size: "length: 152.4 cm, depth: 78.7 cm, height 81.3 cm",
+        subImages: {
+            a: twoSeaterSofa1a,
+            b: twoSeaterSofa1b,
+            c: twoSeaterSofa1c
+        }
     }
 ]

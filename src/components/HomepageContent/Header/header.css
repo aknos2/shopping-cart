@@ -1,5 +1,6 @@
 :root {
     --header-background: rgb(56, 42, 26);
+    --header-button-color: antiquewhite;
 }
 
 header {
@@ -34,9 +35,9 @@ nav {
 
 .nav-links.right {
     display: flex;
-    color: beige;
     margin-left: auto;
     gap: 1rem;
+    transform: translateX(-50px);
 }
 
 .nav-links.left {
@@ -47,13 +48,13 @@ nav {
 
 .nav-links a {
     font-size: 1.5rem;
-    color: antiquewhite;
+    color: var(--header-button-color);
 }
 
 .side-menu-container {
     position: absolute;
     top: 100%; /* Position below the SHOP button */
-    left: -200%;
+    left: 0;
     z-index: 1000;
     margin-top: -1px; /* Small gap between button and menu */
     animation: fadeIn 0.2s ease-in-out;
@@ -72,4 +73,30 @@ nav {
 
 .side-menu-container .search-container {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.shop-btn-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.shop-btn-wrap p {
+    color: var(--header-button-color);
+    font-size: 1.5rem;
+    margin-top: 3px;
+}
+
+.shop-btn-wrap svg {
+    fill: var(--header-button-color);
+}
+
+.cart-icon, .account-icon {
+    fill: var(--header-button-color);
+}
+
+.cart-icon {
+    width: 35px;
+    height: 35px;
+    margin-top: 2px;
 }

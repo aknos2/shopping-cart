@@ -1,18 +1,21 @@
 import './productPage.css';
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { twoSeaterSofas } from "../ShopPages/TwoSeater/twoSeaterSofas";
+import { threeSeaterSofas } from "../ShopPages/ThreeSeater/threeSeaterSofas";
+import { fourSeaterSofas } from "../ShopPages/FourSeater/fourSeaterSofas";
 import Button from '../others/Button';
 import { useCart } from '../CartPage/CartContext';
 
 const ProductPage = () => {
     const { productId } = useParams();
-    const { addToCart, cartItems } = useCart(); // Use the cart context
+    const { addToCart, cartItems } = useCart(); 
     
-    // Find the product from the relevant data source
     const findProduct = () => {
-        // Look for product by productId in twoSeaterSofas
-        return twoSeaterSofas.find(sofa => sofa.productId === productId);
+        // Look for product by productId in all sofa collections
+        return twoSeaterSofas.find(sofa => sofa.productId === productId) ||
+               threeSeaterSofas.find(sofa => sofa.productId === productId) ||
+               fourSeaterSofas.find(sofa => sofa.productId === productId);
     };
     
     const product = findProduct();

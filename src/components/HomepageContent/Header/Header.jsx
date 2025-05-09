@@ -1,4 +1,5 @@
 import Button from '../../others/Button';
+import { AccountIcon, CartIcon, MenuIcon } from '../../others/Icons';
 import SideMenu from '../Side-Menu/SideMenu';
 import './header.css';
 import { useState, useRef } from 'react';
@@ -28,8 +29,11 @@ const Header = () => {
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                     ref={menuContainerRef}
-                >
-                    <Button text="SHOP" onClick={toggleSideMenu}/>
+                >       
+                    <div className='shop-btn-wrap'>
+                        <MenuIcon onClick={toggleSideMenu}/>
+                        <p>SHOP</p>
+                    </div>
                     {isSideMenu && (
                         <div className="side-menu-container">
                             <SideMenu />
@@ -38,8 +42,8 @@ const Header = () => {
                 </div>
                 <Link className="logo-link" to="/">LOGO</Link>
                 <div className='nav-links right'>
-                    <Link to="cart">CART</Link>
-                    <a href="##">Login</a>
+                    <Link to="cart"><CartIcon className='cart-icon'/></Link>
+                    <AccountIcon className='account-icon'/>
                 </div>
             </nav>
         </header>

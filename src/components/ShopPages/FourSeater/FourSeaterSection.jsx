@@ -1,6 +1,6 @@
-import Header from "../../HomepageContent/Header/header"
 import styles from './fourSeaterSection.module.css'
 import { fourSeaterSofas } from "./fourSeaterSofas";
+import { Link } from 'react-router-dom';
 
 const FourSeaterSection = () => {
     return (
@@ -10,6 +10,11 @@ const FourSeaterSection = () => {
             <div className={styles.headerImage}></div>
             <div className={styles.itemsContainer}>
                 {fourSeaterSofas.map((sofa, index) => (
+                    <Link 
+                        to={`/fourseatersofas/${sofa.productId}`} 
+                        className={styles.cardLink}
+                        key={index}
+                    >
                     <div className={styles.card} key={index}>
                         <img src={sofa.image} alt={`Four seater sofa ${index + 1}`}/>
                         <div className={styles.itemsContainerContent}>
@@ -22,6 +27,7 @@ const FourSeaterSection = () => {
                             </div>
                         </div>
                     </div>
+                    </Link>
                 ))}
             </div>
         </div>
