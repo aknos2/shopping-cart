@@ -1,0 +1,155 @@
+.container {
+    max-width: 100%;
+    width: 100rem;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+.container h2 {
+    margin-right: auto;
+    padding-bottom: 25px;
+    font-size: 2rem;
+}
+
+.quantity {
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    padding-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.contentWrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 200px;
+    gap: 100px;
+}
+
+.cardItem {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    width: 100%;
+    gap: 15px;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    padding: 20px;
+}
+
+.productsWrap p {
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+
+.priceContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-4rem);
+}
+
+.priceWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30rem;
+    max-height: 20rem;
+    background-color: rgb(245, 237, 227);
+    padding: 20px;
+}
+
+.itemPrice {
+    display: flex;
+    flex-direction: row;
+    gap: 10x;
+    padding-bottom: 10px;
+}
+
+.itemPrice p:nth-of-type(2), h3:nth-of-type(2) {
+    margin-left: auto;
+}
+
+.proceedBtn {
+    margin-top: 20px;
+    padding: 10px;
+    width: 80%;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    background-color: rgb(63, 66, 75);
+    color: white;
+}
+
+.continueShoppingBtn {
+    transform: translateY(20px);
+    text-decoration: underline;
+    background: none;
+    border: none;
+}
+
+.cardItemMiddleContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* pushes last child to bottom */
+}
+
+.cardItemRightContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 15px;
+}
+
+.cardDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cardImage img {
+    max-width: 15rem;
+    height: 10rem;
+}
+
+.cardDetails h3 {
+    font-size: 1.8rem;
+}
+
+.cardSize {
+    font-size: 1rem;
+}
+
+.cardPrice {
+    font-size: 1.1rem;
+    font-weight: 590;
+}
+
+.cardCode {
+    margin-top: -5px;
+}
+
+.cardQuantity {
+    display: flex;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.cardQuantity button{
+    width: 2.5rem;
+}
+
+.itemQuantity {
+    border: 1px solid black;
+    padding: 0.3rem 1.5rem;
+    background-color: white;
+}

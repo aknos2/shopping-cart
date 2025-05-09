@@ -38,7 +38,7 @@ const Header = () => {
                 </div>
                 <Link className="logo-link" to="/">LOGO</Link>
                 <div className='nav-links right'>
-                    <a href="##">CART</a>
+                    <Link to="cart">CART</Link>
                     <a href="##">Login</a>
                 </div>
             </nav>

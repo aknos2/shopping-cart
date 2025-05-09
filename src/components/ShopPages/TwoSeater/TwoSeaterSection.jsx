@@ -1,4 +1,3 @@
-import Header from "../../HomepageContent/Header/header"
 import styles from './twoSeaterSection.module.css'
 import { twoSeaterSofas } from "./twoSeaterSofas"
 import { Link } from "react-router-dom"

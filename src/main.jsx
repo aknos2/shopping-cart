@@ -9,6 +9,8 @@ import ThreeSeaterSection from './components/ShopPages/ThreeSeater/ThreeSeaterSe
 import FourSeaterSection from './components/ShopPages/FourSeater/FourSeaterSection.jsx'
 import RootLayout from './layouts/rootLayout.jsx'
 import ProductPage from './components/ProductPage/ProductPage.jsx'
+import CartPage from './components/CartPage/CartPage.jsx'
+import { CartProvider } from './components/CartPage/CartContext.jsx'
 
 const router = createBrowserRouter([
   {
@@ -36,12 +38,18 @@ const router = createBrowserRouter([
         path: "fourseatersofas",
         element: <FourSeaterSection />,
       },
+      {
+        path: "cart",
+        element: <CartPage />,
+      }
     ]
   },
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   </StrictMode>,
 )

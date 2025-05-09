@@ -1,4 +1,7 @@
 import twoSeaterSofa1 from "../../../assets/sofas/TwoSeater/two-seater-sofa1-high.webp" ;
+import twoSeaterSofa1a from "../../../assets/sofas/TwoSeater/two-seater-sofa1-subA-high.jpeg" ;
+import twoSeaterSofa1b from "../../../assets/sofas/TwoSeater/two-seater-sofa1-subB-high.jpeg" ;
+import twoSeaterSofa1c from "../../../assets/sofas/TwoSeater/two-seater-sofa1-subC-high.jpeg" ;
 
 export const twoSeaterSofas = [
     {
@@ -7,10 +10,11 @@ export const twoSeaterSofas = [
         title: "New Ace",
         description: "Modern leather sofa",
         productId: "a01",
+        size: "length: 152.4 cm, depth: 78.7 cm, height 81.3 cm",
         subImages: {
-            a: twoSeaterSofa1,
-            b: twoSeaterSofa1,
-            c: twoSeaterSofa1
+            a: twoSeaterSofa1a,
+            b: twoSeaterSofa1b,
+            c: twoSeaterSofa1c
         }
     },
     {
