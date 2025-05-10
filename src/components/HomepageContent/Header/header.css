@@ -36,7 +36,7 @@ nav {
 .nav-links.right {
     display: flex;
     margin-left: auto;
-    gap: 1rem;
+    gap: 2rem;
     transform: translateX(-50px);
 }
 
@@ -89,14 +89,31 @@ nav {
 
 .shop-btn-wrap svg {
     fill: var(--header-button-color);
+    cursor: pointer;
 }
 
 .cart-icon, .account-icon {
     fill: var(--header-button-color);
 }
 
+.cart-icon-wrap {
+    position: relative;
+}
+
 .cart-icon {
     width: 35px;
     height: 35px;
     margin-top: 2px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
 }

@@ -1,4 +1,4 @@
-import Button from '../../others/Button';
+import { useCart } from '../../CartPage/CartContext';
 import { AccountIcon, CartIcon, MenuIcon } from '../../others/Icons';
 import SideMenu from '../Side-Menu/SideMenu';
 import './header.css';
@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     const [isSideMenu, setSideMenu] = useState(false);
     const menuContainerRef = useRef(null);
+    const {cartItems} = useCart();
+    const totalCartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
     const toggleSideMenu = () => {
         setSideMenu(prev => !prev);
@@ -32,7 +34,7 @@ const Header = () => {
                 >       
                     <div className='shop-btn-wrap'>
                         <MenuIcon onClick={toggleSideMenu}/>
-                        <p>SHOP</p>
+                        <p className='no-select'>SHOP</p>
                     </div>
                     {isSideMenu && (
                         <div className="side-menu-container">
@@ -40,10 +42,14 @@ const Header = () => {
                         </div>
                     )}
                 </div>
-                <Link className="logo-link" to="/">LOGO</Link>
+                <Link className="logo-link no-select" to="/">LOGO</Link>
                 <div className='nav-links right'>
-                    <Link to="cart"><CartIcon className='cart-icon'/></Link>
                     <AccountIcon className='account-icon'/>
+                    <div className='cart-icon-wrap'>
+                        <Link to="cart"><CartIcon className='cart-icon'/>
+                         {cartItems.length > 0 && <span className="cart-count no-select">{totalCartItemCount}</span>}
+                         </Link>
+                    </div>
                 </div>
             </nav>
         </header>

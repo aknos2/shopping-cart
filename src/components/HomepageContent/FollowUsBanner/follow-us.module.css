@@ -20,11 +20,11 @@
     gap: 10px;
 }
 
-.facebook-icon {
-    fill: blue !important;
-    width: 50px;
+.facebookIcon {
+    color: #4267B2;
+    width: 35px;
 }
 
-.youtube-icon {
-    fill: red;
+.youtubeIcon {
+    color: #FF0000;
 }

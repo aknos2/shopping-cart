@@ -1,14 +1,18 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import './homepage.css';
 import Header from "../Header/Header";
 import NewArrivals from '../NewArrivals/NewArrivals';
 import Sales from '../Sales/Sales';
 import FollowUsBanner from '../FollowUsBanner/FollowUsBanner';
 import MainCredits from './MainCredits';
+import FindUsHere from '../FindUsHere/FindUsHere';
+import Footer from '../Footer/Footer';
 
 const Homepage = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
+    const newArrivalsRef = useRef(null);
+
 
     const backgroundImages = [
         'url(./src/assets/sofas/main-sofa2-high.webp',
@@ -48,7 +52,6 @@ const Homepage = () => {
     return (
         <>
         <Header />
-        <main>
             <div 
                 className='homepage-container'
                 style={{ 
@@ -67,9 +70,10 @@ const Homepage = () => {
                 <MainCredits currentImageIndex={currentImageIndex} />
                 <FollowUsBanner />
             </div>
-            <NewArrivals />
+            <NewArrivals ref={newArrivalsRef}/>
             <Sales />
-        </main> 
+            <FindUsHere />
+            <Footer />
         </>
     )
 }

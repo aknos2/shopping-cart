@@ -1,0 +1,55 @@
+:root {
+    --findRetailer-background: rgb(62, 69, 73);
+    --findUsHere-container-background:rgb(218, 209, 181);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    position: relative;
+    background-color: var(--findUsHere-container-background)
+}
+
+.container h2 {
+    font-size: 2rem;
+    color: rgb(72, 66, 66);
+    margin-top: 20px;
+}
+
+.logoWrap img{
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+}
+
+.logoWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.findRetailerWrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--findRetailer-background);
+    font-size: 1.5rem;
+}
+
+.findRetailerWrap:hover {
+   opacity: 0.9;
+   cursor: pointer;
+}
+
+.findRetailerBtn {
+    background-color: var(--findRetailer-background);
+    border: 1px solid black;
+    padding: 15px 20px;
+    color: whitesmoke;
+    border: none;
+}

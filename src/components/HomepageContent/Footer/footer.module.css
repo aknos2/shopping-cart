@@ -1,0 +1,83 @@
+:root {
+    --footer-background: rgba(207, 202, 165, 0.5);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 40px 50px 0 50px;
+    min-height: 20vh;
+    background-color: var(--footer-background);
+}
+
+.iconsWrap {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.iconsWrap svg:hover {
+    cursor: pointer;
+}
+
+.containerLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.containerLeft h3 {
+    font-size: 1.8rem;
+    margin-left: 5px;
+}
+
+.content ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    list-style: none;
+    font-size: 1.5rem;
+    gap: 5px;
+}
+
+.content li:hover {
+    cursor: pointer;
+}
+
+.copyrightWrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--footer-background);
+    padding-bottom: 20px;
+}
+
+.facebookIcon {
+    color: #4267B2;
+    width: 35px;
+}
+
+.youtubeIcon {
+    color: #FF0000;
+}
+
+.credits {
+    font-weight: bold;
+    font-size: 1.8rem;
+    animation: pounding 2s infinite ease-in-out;
+    margin-left: 15px;
+}
+
+.credits:hover {
+    color: rgba(255, 0, 0);
+}
+
+@keyframes pounding {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: none;
+  }
+  50% {
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+}

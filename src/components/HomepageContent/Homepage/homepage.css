@@ -4,6 +4,7 @@
 
 body {
     padding-top: 5rem; /*header is fixed position with 5rem height*/
+    background-color: beige;
 }
 
 main {
@@ -12,7 +13,7 @@ main {
 }
 
 .homepage-container {
-    background: var(--homepage-background);
+    /* background: var(--homepage-background); */
     min-height: 72vh;
     display: grid;
     grid-template-columns: 1fr 1fr;

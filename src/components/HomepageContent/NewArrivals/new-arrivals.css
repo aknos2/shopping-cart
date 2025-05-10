@@ -1,8 +1,12 @@
+:root {
+    --newArrivals-container-background: beige;
+}
+
 .new-arrivals-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: beige;
+    background-color: var(--newArrivals-container-background);
     overflow-x: hidden;
     z-index: 0;
     width: 100%;
@@ -37,6 +41,7 @@
     background-repeat: no-repeat;
     background-position: 50% 60%;
     z-index: 99;
+    cursor: pointer;
 }
 
 .new-arrivals-popup p {
@@ -48,6 +53,13 @@
     border-left: none;
     text-align: center;
     font-size: 1.2rem;
+}
+
+.new-arrivals-popup:hover {
+    border: 2px solid rgb(255, 252, 252);
+    border-left: none;
+    cursor: pointer;
+    opacity: 0.9;
 }
 
 /* Container for the carousel and buttons */

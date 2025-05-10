@@ -3,9 +3,9 @@ import './new-arrivals.css';
 import { newSofaAds } from './new-sofas';
 import Button from '../../others/Button';
 
-const NewArrivalsPopUp = () => {
+const NewArrivalsPopUp = ({scrollToSection}) => {
     return (
-        <div className="new-arrivals-popup">
+        <div className="new-arrivals-popup" onClick={scrollToSection}>
             <p>New Arrivals</p>
         </div>
     )
@@ -72,11 +72,20 @@ const NewArrivalsWrap = () => {
   
 
 const NewArrivals = () => {
+  const sectionRef = useRef(null);
+  
+  const scrollToSection = () => {
+    sectionRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end'
+    });
+  };
+
     return (
-        <section>
+        <section ref={sectionRef}>
             <div className="new-arrivals-container">
-                <NewArrivalsPopUp />
-                <h2>New Arrivals</h2>
+                <NewArrivalsPopUp scrollToSection={scrollToSection}/>
+                <h2 className='no-select'>New Arrivals</h2>
                 <NewArrivalsWrap />
             </div>
         </section>

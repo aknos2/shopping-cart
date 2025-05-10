@@ -25,3 +25,7 @@ Photo by <a href="https://unsplash.com/@rpnickson?utm_content=creditCopyText&utm
 Photo by <a href="https://unsplash.com/@bluedotdesign?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Parichehr Rezaei</a> on <a href="https://unsplash.com/photos/a-blue-and-grey-chair-H_DmEF95H1I?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
 Image by <a href="https://pixabay.com/users/jazella-1930366/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3916537">Jazella</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3916537">Pixabay</a>
+
+<a target="_blank" href="https://icons8.com/icon/Xy10Jcu1L2Su/instagram">Instagram</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+Image by <a href="https://pixabay.com/users/dunbur-16945180/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7126713">john dunbur</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7126713">Pixabay</a>

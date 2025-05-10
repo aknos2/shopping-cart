@@ -6,9 +6,9 @@ const FollowUsBanner = () => {
         <div className={styles.container}>
             <div className={styles.content}>
                 <div className={styles.logos}>
-                    <InstagramIcon className='instagran-icon'/>
-                    <FacebookIcon className='facebook-icon'/>
-                    <YoutbeIcon className='youtube-icon'/>
+                    <InstagramIcon className={styles.InstagramIcon}/>
+                    <FacebookIcon className={styles.facebookIcon}/>
+                    <YoutbeIcon className={styles.youtubeIcon}/>
                 </div>
             </div>
         </div>
