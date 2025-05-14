@@ -11,6 +11,7 @@ import RootLayout from './layouts/rootLayout.jsx'
 import ProductPage from './components/ProductPage/ProductPage.jsx'
 import CartPage from './components/CartPage/CartPage.jsx'
 import { CartProvider } from './components/CartPage/CartContext.jsx'
+import Credits from './components/Credits/Credits.jsx'
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "cart",
         element: <CartPage />,
+      },
+      {
+        path: "credits",
+        element: <Credits />,
       }
     ]
   },

@@ -71,6 +71,7 @@
 
 .product-info h2 {
   font-size: 3.8rem;
+  margin-left: -3px;
 }
 
 .product-description {
@@ -83,10 +84,9 @@
 }
 
 .product-price {
-  padding-top: 4rem;
+  padding-top: 2rem;
   font-size: 2.5rem;
   font-weight: bold;
-  margin: 1rem 0;
 }
 
 .buy-button {
@@ -136,11 +136,90 @@
 }
 
 .add-favorite-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
+    width: 50px;
     height: 50px;
     margin-left: 10px;
+    background-color: #fff6f6;
+}
+
+.add-favorite-button:hover {
+  background-color: rgb(221, 176, 209);
+  cursor: pointer;
+  transform: translateY(2px);
 }
 
 .product-page-back-btn {
     font-size: 1.5rem;
+}
+
+.cart-btn-wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 40px;
+}
+
+.quantity-selector {
+  text-align: center;
+}
+
+.quantity-controls {
+  display: flex;
+  gap: 5px;
+}
+
+.quantity-controls input{
+  width: 25px;
+  text-align: center;
+  border: 1px solid black
+}
+
+.quantity-controls button {
+  width: 25px;
+}
+
+.color-selector {
+  padding-top: 20px;
+}
+
+.color-selector p {
+  font-size: 1.3rem;
+  margin-left: 2px;
+}
+
+.color-selector button{
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  border: none;
+}
+
+.color-wrap {
+  display: flex;
+  gap: 10px;
+}
+
+.color-wrap .default-color {
+  background-color: rgb(166, 162, 162);
+}
+
+.color-wrap .blue-color {
+  background-color: rgb(69, 86, 149);
+}
+
+.color-wrap .green-color {
+  background-color: rgb(59, 107, 75);
+}
+
+.color-wrap .purple-color {
+  background-color: rgb(152, 70, 161);
+}
+
+.color-wrap .active {
+    border: 2px solid var(--header-background); /* or any other styling to indicate selection */
+    transform: scale(110%);
 }

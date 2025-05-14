@@ -1,5 +1,5 @@
 import { useCart } from '../../CartPage/CartContext';
-import { AccountIcon, CartIcon, MenuIcon } from '../../others/Icons';
+import { AccountIcon, CartIcon, HeartIcon, MenuIcon, SearchIcon } from '../../others/Icons';
 import SideMenu from '../Side-Menu/SideMenu';
 import './header.css';
 import { useState, useRef } from 'react';
@@ -45,6 +45,7 @@ const Header = () => {
                 <Link className="logo-link no-select" to="/">LOGO</Link>
                 <div className='nav-links right'>
                     <AccountIcon className='account-icon'/>
+                    <HeartIcon className='heart-icon'/>
                     <div className='cart-icon-wrap'>
                         <Link to="cart"><CartIcon className='cart-icon'/>
                          {cartItems.length > 0 && <span className="cart-count no-select">{totalCartItemCount}</span>}

@@ -3,10 +3,10 @@ import './homepage.css';
 import Header from "../Header/Header";
 import NewArrivals from '../NewArrivals/NewArrivals';
 import Sales from '../Sales/Sales';
-import FollowUsBanner from '../FollowUsBanner/FollowUsBanner';
 import MainCredits from './MainCredits';
 import FindUsHere from '../FindUsHere/FindUsHere';
 import Footer from '../Footer/Footer';
+import BottomBanner from '../FollowUsBanner/BottomBanner';
 
 const Homepage = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -68,8 +68,8 @@ const Homepage = () => {
                     ))}
                 </div>
                 <MainCredits currentImageIndex={currentImageIndex} />
-                <FollowUsBanner />
             </div>
+            <BottomBanner />
             <NewArrivals ref={newArrivalsRef}/>
             <Sales />
             <FindUsHere />

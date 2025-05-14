@@ -1,6 +1,6 @@
 :root {
-    --findRetailer-background: rgb(62, 69, 73);
-    --findUsHere-container-background:rgb(218, 209, 181);
+    --findRetailer-background: rgb(61, 43, 23);
+    --findUsHere-container-background:rgb(241, 244, 245);
 }
 
 .container {
@@ -16,13 +16,13 @@
 .container h2 {
     font-size: 2rem;
     color: rgb(72, 66, 66);
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .logoWrap img{
     width: 100%;
     max-width: 200px;
-    height: 150px;
+    height: 120px;
 }
 
 .logoWrap {

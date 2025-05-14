@@ -53,6 +53,7 @@
     gap: 15px;
     border-bottom: 1px solid black;
     padding: 20px;
+    position: relative;
 }
 
 .productsWrap p {
@@ -134,15 +135,22 @@
 .cardItemRightContent {
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: end;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 .cardDetails {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.cardColor {
+    margin-top: -5px;
+    margin-bottom: -5px;
+    font-size: 1rem;
 }
 
 .cardImage img {
@@ -165,6 +173,7 @@
 
 .cardCode {
     margin-top: -5px;
+    margin-bottom: 10px;
 }
 
 .cardQuantity {
@@ -181,4 +190,17 @@
     border: 1px solid black;
     padding: 0.3rem 1.5rem;
     background-color: white;
+}
+
+.removeBtn {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    transform: translate(35px, -15px);
+    width: 30px;
+    fill: rgb(54, 49, 49);
+}
+
+.removeBtn:hover {
+    cursor: pointer;
 }

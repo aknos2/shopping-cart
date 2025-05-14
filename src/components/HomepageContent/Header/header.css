@@ -1,6 +1,6 @@
 :root {
     --header-background: rgb(56, 42, 26);
-    --header-button-color: antiquewhite;
+    --header-button-color: rgb(250, 246, 240);
 }
 
 header {
@@ -36,7 +36,7 @@ nav {
 .nav-links.right {
     display: flex;
     margin-left: auto;
-    gap: 2rem;
+    gap: 1.5rem;
     transform: translateX(-50px);
 }
 
@@ -44,6 +44,8 @@ nav {
     margin-left: 85px;
     position: relative;
     z-index: 1000; 
+    display: flex;
+    gap: 20px;
 }
 
 .nav-links a {
@@ -94,16 +96,22 @@ nav {
 
 .cart-icon, .account-icon {
     fill: var(--header-button-color);
+    cursor: pointer;
 }
 
 .cart-icon-wrap {
     position: relative;
 }
 
-.cart-icon {
+.cart-icon, .heart-icon {
     width: 35px;
     height: 35px;
     margin-top: 2px;
+}
+
+.heart-icon {
+    fill: var(--header-button-color);
+    cursor: pointer;
 }
 
 .cart-count {

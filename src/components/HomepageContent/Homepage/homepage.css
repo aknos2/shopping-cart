@@ -4,7 +4,7 @@
 
 body {
     padding-top: 5rem; /*header is fixed position with 5rem height*/
-    background-color: beige;
+    /* background-color: beige; */
 }
 
 main {
@@ -69,3 +69,4 @@ main {
 .photo-credit a:hover {
     text-decoration: underline;
 }
+

@@ -23,6 +23,8 @@ export const LogoThree = () => {
 
 export const LogoFour = () => {
     return (
-        <img src={logo4} alt="logo four" style={{borderRadius: "50%", height:"100px", width:"120px" ,marginTop:"20px"}}/>
+        <img src={logo4} alt="logo four" 
+        style={{borderRadius: "50%", height:"100px", width:"150px", marginLeft:"-20px" }}
+        />
     )
 }

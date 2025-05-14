@@ -11,10 +11,11 @@ export const twoSeaterSofas = [
         description: "Modern leather sofa",
         productId: "a01",
         size: "length: 152.4 cm, depth: 78.7 cm, height 81.3 cm",
-        subImages: {
-            a: twoSeaterSofa1a,
-            b: twoSeaterSofa1b,
-            c: twoSeaterSofa1c
+        colors: {
+            default: twoSeaterSofa1,
+            blue: twoSeaterSofa1a,
+            green: twoSeaterSofa1b,
+            purple: twoSeaterSofa1c
         }
     },
     {

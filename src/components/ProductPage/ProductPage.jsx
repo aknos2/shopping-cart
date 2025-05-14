@@ -6,6 +6,7 @@ import { threeSeaterSofas } from "../ShopPages/ThreeSeater/threeSeaterSofas";
 import { fourSeaterSofas } from "../ShopPages/FourSeater/fourSeaterSofas";
 import Button from '../others/Button';
 import { useCart } from '../CartPage/CartContext';
+import { HeartIcon } from '../others/Icons';
 
 const ProductPage = () => {
     const { productId } = useParams();
@@ -20,8 +21,10 @@ const ProductPage = () => {
     
     const product = findProduct();
     
-    // State to manage the currently displayed main image
+    // State to manage the currently displayed main image and selected color
     const [mainImage, setMainImage] = useState(product?.image || '');
+    const [selectedColor, setSelectedColor] = useState('default');
+    
     // State to track quantity
     const [quantity, setQuantity] = useState(1);
     // State to show confirmation message
@@ -32,9 +35,24 @@ const ProductPage = () => {
         setMainImage(imageSrc);
     };
     
+    // Handle color selection
+    const handleColorSelection = (color) => {
+        if (product.colors && product.colors[color]) {
+            setSelectedColor(color);
+            setMainImage(product.colors[color]);
+        }
+    };
+    
     // Handle adding product to cart
     const handleAddToCart = () => {
-        addToCart(product, quantity);
+        // Create a new product object with the selected color
+        const productToAdd = {
+            ...product,
+            image: mainImage, // Use the currently selected image
+            selectedColor: selectedColor // Add the selected color to the cart item
+        };
+        
+        addToCart(productToAdd, quantity);
         setShowConfirmation(true);
         
         // Hide confirmation after 3 seconds
@@ -61,18 +79,10 @@ const ProductPage = () => {
                         className="main-product-image"
                     />
                     {/* Display sub images if they exist */}
-                    {product.subImages && (
-                        <div className="sub-images-container">
-                            {/* Add the main product image as first thumbnail */}
-                            <div 
-                                className={`product-sub-image-wrap ${mainImage === product.image ? 'active' : ''}`}
-                                onClick={() => handleSubImageClick(product.image)}
-                            >
-                                <img src={product.image} alt={`${product.title} main view`} />
-                            </div>
-                            
+                    {product.colors && (
+                        <div className="sub-images-container">   
                             {/* Map through other subImages */}
-                            {Object.entries(product.subImages).map(([key, imageSrc]) => (
+                            {Object.entries(product.colors).map(([key, imageSrc]) => (
                                 <div 
                                     className={`product-sub-image-wrap ${mainImage === imageSrc ? 'active' : ''}`}
                                     key={key}
@@ -98,18 +108,30 @@ const ProductPage = () => {
                            <p>+</p>
                         </div>
                     </div>
+
+                    <div className='color-selector'>
+                        <p>Color</p>
+                        <div className='color-wrap'>
+                            {Object.keys(product.colors || {}).map((color) => (
+                                <Button 
+                                    key={color}
+                                    className={`${color}-color ${selectedColor === color ? 'active' : ''}`}
+                                    onClick={() => handleColorSelection(color)}
+                                />
+                            ))}
+                        </div>
+                    </div>
+
                     <p className="product-price">${product.price}</p>
                     
                     {/* Quantity selector */}
                     <div className="quantity-selector">
-                        <label htmlFor="quantity">Quantity:</label>
+                        <label htmlFor="quantity"></label>
                         <div className="quantity-controls">
-                            <button 
+                            <Button 
+                                text="-"
                                 onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
-                                disabled={quantity <= 1}
-                            >
-                                -
-                            </button>
+                                disabled={quantity <= 1}/>
                             <input 
                                 type="number" 
                                 id="quantity" 
@@ -117,9 +139,9 @@ const ProductPage = () => {
                                 value={quantity}
                                 onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
                             />
-                            <button onClick={() => setQuantity(prev => prev + 1)}>
-                                +
-                            </button>
+                            <Button 
+                                text="+" 
+                                onClick={() => setQuantity(prev => prev + 1)}/>
                         </div>
                     </div>
                     
@@ -136,7 +158,9 @@ const ProductPage = () => {
                             className='buy-button'
                             onClick={handleAddToCart}
                         />
-                        <Button text="heart" className='add-favorite-button' />
+                        <div className='add-favorite-button'> 
+                            <HeartIcon />
+                        </div>
                     </div>
                 </div>
             </div>

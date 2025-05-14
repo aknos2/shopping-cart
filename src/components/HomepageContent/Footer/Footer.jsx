@@ -1,5 +1,6 @@
 import { FacebookIcon, InstagramIcon, YoutbeIcon } from '../../others/Icons';
 import styles from './footer.module.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -22,7 +23,9 @@ const Footer = () => {
                             <li>Contact Us</li>
                             <li>News</li>
                             <li>Meet the Team</li>
-                            <li className={styles.credits}>Credits</li>
+                            <Link to="credits">
+                                <li className={styles.credits}>Credits</li>
+                            </Link>
                         </ul>
                     </div>
                 </div>

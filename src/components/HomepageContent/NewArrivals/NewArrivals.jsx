@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import './new-arrivals.css';
 import { newSofaAds } from './new-sofas';
 import Button from '../../others/Button';
@@ -16,11 +16,28 @@ const NewArrivalsWrap = () => {
     const containerRef = useRef(null);
     const totalCards = newSofaAds.length;
     const cardRef = useRef(null);
+    const [cardWidth, setCardWidth] = useState(0);
+  
+    // Calculate card width on mount and when window resizes
+    useEffect(() => {
+        const updateCardWidth = () => {
+            if (cardRef.current) {
+                const width = cardRef.current.getBoundingClientRect().width;
+                setCardWidth(width);
+            }
+        };
+        
+        updateCardWidth();
+        window.addEventListener('resize', updateCardWidth);
+        
+        return () => {
+            window.removeEventListener('resize', updateCardWidth);
+        };
+    }, []);
   
     const handleScroll = (direction) => {
       if (!containerRef.current) return;
   
-      const cardWidth = cardRef.current?.getBoundingClientRect().width ?? 0;
       const gap = 80;
       const scrollAmount = cardWidth + gap;
   

@@ -3,6 +3,7 @@ import { useCart } from './CartContext';
 import styles from './cartPage.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { TrashIcon } from '../others/Icons';
 
 const CartPage = () => {
     const { cartItems, removeFromCart, updateQuantity, cartTotal, shippingFee } = useCart();
@@ -80,6 +81,11 @@ const CartPage = () => {
                                         <div className={styles.cardItemMiddleContent}>
                                             <div className={styles.cardDetails}>
                                                 <h3>{item.title}</h3>
+                                                {item.selectedColor && (
+                                                    <p className={styles.cardColor}>
+                                                        Color: {item.selectedColor.charAt(0).toUpperCase() + item.selectedColor.slice(1)}
+                                                    </p>
+                                                )}
                                                 <p className={styles.cardSize}>{item.size}</p>
                                                 <p className={styles.cardPrice}>${item.price.toFixed(2)} / Item</p>
                                                 <p className={styles.cardCode}>Code: {item.productId}</p>
@@ -93,7 +99,7 @@ const CartPage = () => {
                                     
                                         <div className={styles.cardItemRightContent}>
                                             <p>Subtotal: ${(item.price * item.quantity).toFixed(2)}</p>
-                                            <Button className={styles.removeBtn} text="delete" onClick={() => removeFromCart(item.productId)} />
+                                             <TrashIcon className={styles.removeBtn}  onClick={() => removeFromCart(item.productId)}/>
                                         </div>
                                     </div>
                                 </div>

@@ -39,15 +39,6 @@ const ChairMenu = () => {
     )
 }
 
-const SearchBar = () => {
-    return (
-        <div className="search-bar">
-            <label htmlFor="search"></label>
-            <input type="search" placeholder='Search item...'/>
-        </div>
-    )
-}
-
 const CategoryCard = ({ className, text, onClick, onMouseEnter }) => {
     return (
         <button
@@ -123,7 +114,6 @@ const SideMenu = () => {
 
     return (
         <div className="search-container">
-            <SearchBar />
             <div className="category-search-wrap">
                 <div
                     className="category-sofa-container"

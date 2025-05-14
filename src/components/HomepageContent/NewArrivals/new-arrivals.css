@@ -1,5 +1,5 @@
 :root {
-    --newArrivals-container-background: beige;
+    --newArrivals-container-background: rgb(255, 255, 255);
 }
 
 .new-arrivals-container {
@@ -85,12 +85,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 80px;
-    width: max-content;
-    height: 70vh;
+    /* Changed from max-content to fit-content to respect container size */
+    width: fit-content;
+    height: 60vh;
     border: 5px solid rgba(0, 0, 0, 0.1);
     padding: 20px 0;
     border-left: none;
@@ -98,8 +98,10 @@
 }
 
 .new-card {
-    width: 70vw;
+    /* Changed from fixed 70vw to responsive sizing with max-width */
+    width: clamp(300px, 70vw, 1200px);
     height: 100%;
+    flex: 0 0 auto; /* Prevent flex items from growing or shrinking */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -160,4 +162,23 @@
 .left-btn-scroll:hover,
 .right-btn-scroll:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Add media queries for better responsiveness */
+@media (max-width: 768px) {
+    .new-card {
+        width: 90vw;
+    }
+    
+    .carousel-container {
+        max-width: 90vw;
+    }
+    
+    .new-card h3 {
+        font-size: 2rem;
+    }
+    
+    .new-card p:first-of-type {
+        font-size: 1.2rem;
+    }
 }
