@@ -1,18 +1,17 @@
 .search-container {
     border: 1px solid black;
-    width: 19rem;
     height: fit-content;
     border-radius: 5px;
-    background: white;
     text-align: center;
+    margin-top: 1.2rem;
 }
 
 .category-search-wrap {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
+    width: 50rem;
 }
 
 .category-search-card {
@@ -95,8 +94,7 @@
 
 .sofa-menu-wrapper {
   position: absolute;
-  left: 100%;
-  top: 0;
+  top: 100%;
   margin-left: -1px;
   z-index: 10;
   animation: fadeIn 0.2s ease-in-out; /*animation from header.css*/
@@ -108,7 +106,7 @@
   background-color: rgb(233, 228, 201);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 10px;
-  min-width: 200px;
+  width: 16.7rem;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
